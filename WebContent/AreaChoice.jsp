@@ -12,7 +12,11 @@
 </head>
 <body>
 <script type="text/javascript" src="JScript.js"></script>
+
 <form action="SelectAction">
+
+
+<input class="buy_seat" type="hidden" name="buy_seat" value="<s:property value='buy_seat'/>">
 
 <div class="TextArea">
 選択エリア<br>
@@ -24,11 +28,11 @@
 
 <div class="Reset">リセットボタン</div>
 <table>
-<tr><td>A1</td><td>A2</td><td>A3</td><td>A4</td><td>A5</td></tr>
-<tr><td>B1</td><td>B2</td><td>B3</td><td>B4</td><td>B5</td></tr>
-<tr><td>C1</td><td>C2</td><td>C3</td><td>C4</td><td>C5</td></tr>
-<tr><td>D1</td><td>D2</td><td>D3</td><td>D4</td><td>D5</td></tr>
-<tr><td>E1</td><td>E2</td><td>E3</td><td>E4</td><td>E5</td></tr>
+<tr><td class="A1">A1</td><td class="A2">A2</td><td class="A3">A3</td><td class="A4">A4</td><td class="A5">A5</td></tr>
+<tr><td class="B1">B1</td><td class="B2">B2</td><td class="B3">B3</td><td class="B4">B4</td><td class="B5">B5</td></tr>
+<tr><td class="C1">C1</td><td class="C2">C2</td><td class="C3">C3</td><td class="C4">C4</td><td class="C5">C5</td></tr>
+<tr><td class="D1">D1</td><td class="D2">D2</td><td class="D3">D3</td><td class="D4">D4</td><td class="D5">D5</td></tr>
+<tr><td class="E1">E1</td><td class="E2">E2</td><td class="E3">E3</td><td class="E4">E4</td><td class="E5">E5</td></tr>
 </table>
 
 </form>

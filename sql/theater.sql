@@ -21,6 +21,10 @@ drop table if exists buy_seat_list;
 create table buy_seat_list(
 screen_id int not null,
 time_id int not null,
-buy_seat_id int not null primary key,
+buy_seat_id varchar(255) not null primary key,
 user_id varchar(255)
 );
+
+insert into buy_seat_list value
+(1,1,"A1","taro")
+;

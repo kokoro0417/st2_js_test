@@ -8,10 +8,12 @@ import com.opensymphony.xwork2.ActionSupport;
 public class SelectAction extends ActionSupport{
 
 	private String AreaChoice ="";
+	private String buy_seat = "";
 	private String[] TextAry;
 	public ArrayList<DataDTO> aryList = new ArrayList<DataDTO>();
 
 	public String execute(){
+		String ret = ERROR;
 
 		if(AreaChoice.length()>1){
 			TextAry = AreaChoice.split(",");
@@ -23,8 +25,9 @@ public class SelectAction extends ActionSupport{
 				aryList.add(DDTO);
 				count++;
 			}
+			ret = SUCCESS;
 		}
-		return SUCCESS;
+		return ret;
 	}
 
 
@@ -44,6 +47,16 @@ public class SelectAction extends ActionSupport{
 
 	public void setAreaChoice(String areaChoice) {
 		AreaChoice = areaChoice;
+	}
+
+
+	public String getBuy_seat() {
+		return buy_seat;
+	}
+
+
+	public void setBuy_seat(String buy_seat) {
+		this.buy_seat = buy_seat;
 	}
 
 

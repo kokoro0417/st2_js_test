@@ -12,12 +12,37 @@ jQuery(function(){
 
     $(document).ready(function(){
     	Reset();
+    	SelLock();
     });
 
+    function SelLock(){
+    	var BS = $(".buy_seat").val();
+    	var Ary = BS.split(",");
+    	var i = 0;
+    	while(Ary[i]!=null){
+    		$("."+Ary[i]).addClass("Lock");
+    		$("."+Ary[i]).css("background-color","red");
+    		$("."+Ary[i]).css("color","black");
+    		i++;
+
+    	}
+
+    }
+
     function Reset(){
-    	$("table tr td").css("background-color","black");
-    	$("table tr td").css("color","red");
-    	$("table tr td").removeClass("on");
+    	var n = $(".ChengeText").val();
+    	var ResetAry = n.split(",");
+    	var i = 0;
+    	if(ResetAry!=""){
+	    	while(ResetAry[i]!=null){
+	    		$("."+ResetAry[i]).css("background-color","black");
+	        	$("."+ResetAry[i]).css("color","red");
+	        	if($("."+ResetAry[i]).hasClass("on")){
+	        		$("."+ResetAry[i]).removeClass("on");
+	        	}
+	    		i++;
+	    	}
+    	}
     	$(".ChengeText_disp").text("");
     	$(".ChengeText").val("");
     }
@@ -44,7 +69,7 @@ jQuery(function(){
     			$(".ChengeText").val(TextDown($('.ChengeText').val(),CV));
     			$(".ChengeText_disp").text($(".ChengeText").val());
     		}
-    		else{
+    		else if(!$(this).hasClass("Lock")){
     			$(this).addClass("on");
     			$(this).css("background-color","red");
     			$(this).css("color","black");
@@ -85,21 +110,8 @@ jQuery(function(){
     	return Ary;
     }
 
-    $("h1").click(function(){
-                  $(".test1").css("color","red");
-                  });
 
-    $("h1").css("color","red");
-    $("p").fadeOut("slow");
-    $("h2").text("おやすみ");
 
-    $(".test1").click(function(){
-        $(".test2").text("teeeeest2!!");
-    });
-
-    $(".boxA").click(function(){
-        $(".boxB").hide();
-    });
 
    // $(".boxs").hover(
     $(".boxs").hover(

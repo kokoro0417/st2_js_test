@@ -11,8 +11,13 @@
 <link rel="stylesheet" type="text/css" href="Style.css" />
 </head>
 <body>
-<script type="text/javascript" src="JScript.js"></script>
+<%-- <script type="text/javascript" src="JScript.js"></script> --%>
+<s:if test="messege!=''">
+	<s:property value="messege"/>
+</s:if>
+
 <form action="LoginAction">
+<input type="text" name ="buy_seat" value="A1,A2">
 <input type="submit" value="送信">
 </form>
 <br><br>

@@ -15,5 +15,11 @@
 <s:property value="AreaChoice"/><br>
 </s:iterator>
 が選択されました。
+<form action="BuyAction">
+<input type="hidden" name="buylist" value="<s:property value='aryList'/>">
+<input type="submit" value="購入">
+
+</form>
+
 </body>
 </html>
