@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="true"/>
+
+	<package name="com.internousdev.JsTest.action" extends="struts-default">
+
+		<!--////////////////初期画面移動///////////////-->
+		<!-- ロゴクリック -->
+		<action name="LoginAction" class="com.internousdev.JsTest.action.LoginAction" method="execute">
+			<result name="success">AreaChoice.jsp</result>
+			<result name="error">AreaChoice.jsp</result>
+		</action>
+
+		<!--////////////////テストあくしょん///////////////-->
+		<!-- ロゴクリック -->
+		<action name="SelectAction" class="com.internousdev.JsTest.action.SelectAction" method="execute">
+			<result name="success">success.jsp</result>
+			<result name="error">success.jsp</result>
+		</action>
+
+
+	</package>
+
+</struts>
